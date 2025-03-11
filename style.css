@@ -1,0 +1,68 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 2px; 
+    background-color: lightblue;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    clear: both;
+}
+
+#check {
+    padding: 6px;
+    border: 1px solid black;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    clear: both;
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+} 
+
+h2 {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 20px;
+}
+
+button {
+    padding: 2px;
+    margin: 10px;
+}
+
+#row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+    clear: both;
+    padding: 5px;
+    place-items: center;
+    justify-content: center;
+}
+
+#Nau, #Ucz, #Goś {
+    margin-top: 2px;
+    margin-right: 40px;
+    margin-left: 10px;
+}
