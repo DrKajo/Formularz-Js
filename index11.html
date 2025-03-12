@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Notification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <label for="name">imie:</label>
+        <input type="text" id="name" name="name">
+        <label for="surname">nazwisko:</label>
+        <input type="text" id="surname" name="surname">
+        <label for="age">wiek:</label>
+        <input type="number" id="age" name="age">
+        <label for="gender">płeć:</label>
+        <label for="male">Mężczyzna</label>
+        <input type="radio" id="male" name="gender" value="Mężczyzna">
+        <label for="female">Kobieta</label>
+        <input type="radio" id="female" name="gender" value="Kobieta">
+        <button type="button" onclick="skrypt()">Zapisz</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function skrypt(){
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            var age = document.getElementById("age").value;
+            var radios = document.getElementsByName("gender");
+            var radio;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    radio = radios[i].value;
+                    break;
+                }
+                else {
+                    radio = "Niepodana";
+                }
+            }
+            var result = document.getElementById("result")
+            alert("Imie: " + name + "\nNazwisko: " + surname + "\nWiek: " + age + "\nPłeć: " + radio);
+            result.innerHTML = "<h1>Imie: " + name + "<br>Nazwisko: " + surname + "<br>Wiek: " + age + "<br>Płeć: " + radio + "</h1>";
+        }
+    </script>
+</body>
+</html>

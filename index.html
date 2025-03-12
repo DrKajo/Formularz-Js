@@ -14,20 +14,20 @@
         <input type="text" id="email" name="Adres email">
         <label for="Stanowisko">Stanowisko:</label>
         <select id="wybórstanowiska" name="wybórstanowiska">
+            <option value="Nie wybrano">-</option>
             <option Value="Informatyka">Informatyk</option>
             <option value="Mechanika">Mechanik</option>
             <option value="Fryzjerstwo">Fryzjer</option>
         </select>
         <label for="status">Status:</label>
         <div id="row">
-        <label for="status" id="Nau">Nauczyciel</label>
-        <label for="status" id="Ucz">Uczeń</label>
-        <label for="status" id="Goś">Gość</label>
-        </div><div id="row">
-        <input type="radio" id="Nau" name="Statusy" value="Nauczyciel">
-        <input type="radio" id="Ucz" name="Statusy" value="Uczeń">
-        <input type="radio" id="Goś" name="Statusy" value="Gość">
-    </div>
+            <label for="Nau">Nauczyciel</label>
+            <input type="radio" id="Nau" name="Statusy" value="Nauczyciel">
+            <label for="Ucz">Uczeń</label>
+            <input type="radio" id="Ucz" name="Statusy" value="Uczeń">
+            <label for="Goś">Gość</label>
+            <input type="radio" id="Goś" name="Statusy" value="Gość">
+        </div>
         <label for="Reg">Akceptuje regulamin strony oraz pozwalam na przetwarzanie moich danych osobowych</label>
         <input type="checkbox" id="regulamin" name="reg" value="Tak">
         <button type="button" onclick="skrypt()">Zatwierdź</button>
@@ -42,6 +42,15 @@
             var regulaminCheckbox = document.getElementById("regulamin");
             var statusRegulaminu = "";
 
+                if (status === "") {
+                    alert("NIE PODANO STATUSU");
+                    return;
+                }
+                
+
+            if (dane == "")(dane = "Nie wprowadzono")
+            if (email == "")(email = "Nie wprowadzono")
+
             if (regulaminCheckbox.checked) {
                 statusRegulaminu = "Zgoda na przetwarzanie danych osobowych";
             } else {
@@ -49,7 +58,8 @@
             }
 
             var result = document.getElementById("result");
-            result.innerHTML = "<h3>Imię i nazwisko: " + dane + "<br>Email: " + email + "<br>Stanowisko: " + stanowisko + "<br>Status: " + status + "<br>" + statusRegulaminu + "</h3>";
+
+            result.innerHTML = '<h3>Imię i nazwisko: </h3><p id="skrypt"> ' + dane + '</p><br><h3>Email: </h3><p id="skrypt">' + email + '</p><h3><br>Stanowisko: </h3><p id="skrypt">' + stanowisko + '</p><br><h3>Status: </h3><p id="skrypt">' + status + '</p><br><h3>' + statusRegulaminu + '</h3>';
         }
     </script>
 </body>

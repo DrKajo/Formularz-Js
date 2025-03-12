@@ -12,6 +12,13 @@ h3 {
     clear: both;
 }
 
+#skrypt {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    clear: both;
+}
+
 #check {
     padding: 6px;
     border: 1px solid black;
