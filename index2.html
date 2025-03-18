@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 1px solid black;
+        }
+        td, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabela</h2>
+    <table id="myTable">
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+        </tr>
+        <tr>
+            <td>Jan</td>
+            <td>Kowalski</td>
+        </tr>
+        <tr>
+            <td>Anna</td>
+            <td>Nowak</td>
+        </tr>
+    </table>
+    <h2>Formularz zmiany koloru tabeli</h2>
+    <form id="changecolor">
+        <label for="bgcolor">Kolor tła tabeli:</label>
+        <input type="text" id="bgcolor" placeholder="np. Lightblue">
+        <select id="borderStyle" name="Styl obramowania">
+            <option value="Solid">Solid</option>
+            <option Value="Dashed">Dashed</option>
+            <option value="Dotted">Dotted</option>
+            <option value="Double">Double</option>
+        </select>
+        <label for="kolortekstu">Kolor tekstu:</label>
+        <input type="text" id="txtcolor" placeholder="np. Lightblue">
+        <label for="wielkosc">Wielkość czcionki</label>
+        <input type="number" id="wielkosc" placeholder="np. 18">
+        <button type="button" onclick="applycolor()">Zastosuj</button>
+    </form>
+    <script>
+        function applycolor() {
+            var table = document.getElementById('myTable');
+            var borderStyle = document.getElementById('borderStyle').value;
+            var bgcolor = document.getElementById('bgcolor').value;
+            var txtcolor = document.getElementById('txtcolor').value;
+            var wielkosc = document.getElementById('wielkosc').value;
+            table.style.backgroundColor = bgcolor;
+            table.style.border = "1px " + borderStyle + " Black";
+            table.style.color =  txtcolor ;
+            table.style.fontSize = wielkosc + "px" ;
+        }
+    </script>
+</body>
+</html>

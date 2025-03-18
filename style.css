@@ -73,3 +73,21 @@ button {
     margin-right: 40px;
     margin-left: 10px;
 }
+
+#mytable {
+    display: flex;
+    clear: both;
+    place-content: center;
+    place-self: center;
+    justify-content: center;
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid black;
+    border: 20px d;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid black;
+}
